@@ -1,5 +1,7 @@
 import React from 'react';
+import Tag from './Tag';
 
+import '../css/Source.css';
 
 export default class Source extends React.Component {
     constructor(props) {
@@ -14,9 +16,17 @@ export default class Source extends React.Component {
         }
     }
 
+
     getStars() {
-        return '⭐'.repeat(this.state.numStars);
+        const coloredStarsContent = '⭐'.repeat(this.state.numStars);
+        const coloredStars = <span>{coloredStarsContent}</span>;
+
+        const greyStarsContent = '⭐'.repeat(3 - this.state.numStars);
+        const greyStars = <span className="is-grey">{greyStarsContent}</span>;
+
+        return [coloredStars, greyStars];
     }
+
 
     getAuthors() {
         const authors = this.state.authors;
@@ -35,18 +45,25 @@ export default class Source extends React.Component {
 
 
     getTags() {
-        return this.state.tags.map(tagName => <p>{tagName}</p>);
+        return this.state.tags.map(tagName => {
+            return <Tag shownColor="red">{tagName}</Tag>;
+        });
     }
 
 
     render() {
         return (
-            <>
-                <h1>{`${this.state.name} (${this.state.yearPublished})`}</h1>
-                <h2>{this.getAuthors()}</h2>
-                <h2>{this.getStars()}</h2>
-                {this.getTags()}
-            </>
+            <div className="label">
+                <h1>{this.state.symbol}</h1>
+                <h2>{`${this.state.name} (${this.state.yearPublished})`}</h2>
+                
+                <div className="subtitles">
+                    <h3 className="authors">{this.getAuthors()}</h3>
+                    <h3>{this.getStars()}</h3>
+                </div>
+                
+                <div className="tags">{this.getTags()}</div>
+            </div>
         );
     }
 }
