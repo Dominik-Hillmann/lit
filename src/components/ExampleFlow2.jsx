@@ -2,6 +2,8 @@ import React from 'react';
 import ReactFlow from 'react-flow-renderer';
 import '../css/ExampleFlow.css';
 
+import Source from './Source';
+
 const elements = [
     {
         id: '1',
@@ -11,7 +13,7 @@ const elements = [
     }, {
         id: '2',
         // you can also pass a React component as a label
-        data: { label: <div>Hihihi Node</div> },
+        data: { label: <Source /> },
         position: { x: 10, y: 200 },
     }, {
         id: '3',
