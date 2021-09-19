@@ -5,16 +5,18 @@ export default class Sidebar extends React.Component {
 
     constructor(props) {
         super(props);
+
+        this.handleProject1.bind(this);
     }
     
     handleProject1() {
         console.log('Test 1');
-        this.props.changeProject();
+        this.props.changeProject('graph-2');
     }
 
     handleProject2() {
         console.log('Test 2');
-        this.props.changeProject();
+        this.props.changeProject('graph-1');
     }
 
 

@@ -5,3 +5,7 @@ nav {
     background-color: black;
     color: white;
 }
+
+nav p {
+    cursor: pointer;
+}
