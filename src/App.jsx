@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 // import './components/ExampleFlow';
@@ -8,7 +7,6 @@ import Sidebar from './components/Sidebar';
 import React from 'react';
 
 export default class App extends React.Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -17,19 +15,15 @@ export default class App extends React.Component {
         };
     }
 
-    changeProject(graphId) {
-        console.log('Parent method called');
 
+    changeProject(graphId) {
         if (graphId === 'graph-1') {
-            console.log('To graph 2');
             this.setState({
                 graphId: 'graph-2',
                 displayedGraph: <ExampleFlow2 />
             });
             
         } else if (graphId === 'graph-2') {
-            console.log('To graph 1');
-
             this.setState({
                 graphId: 'graph-1',
                 displayedGraph: <ExampleFlow />
@@ -37,6 +31,7 @@ export default class App extends React.Component {
         }
     }
 
+    
     getCurrentGraph() {
         return this.state.displayedGraph;
     }
@@ -45,20 +40,6 @@ export default class App extends React.Component {
     render() {
         return (
             <div className="App">
-                {/* <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <p>
-                        Edit <code>src/App.js</code> and save to reload.
-                    </p>
-                    <a
-                        className="App-link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Learn React
-                    </a>
-                </header> */}
                 <Sidebar changeProject={this.changeProject.bind(this) /* .bind very important */} />
                 {this.getCurrentGraph()}
             </div>

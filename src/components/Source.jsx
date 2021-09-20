@@ -12,7 +12,15 @@ export default class Source extends React.Component {
             yearPublished: 1999,
             authors: ['Bodd et al.'],
             numStars: 2,
-            tags: ['Data', 'Biology']
+            tags: [
+                {
+                    name: 'Data',
+                    color: 'red'
+                }, {
+                    name: 'Biology',
+                    color: 'green'
+                }
+            ]
         }
     }
 
@@ -45,8 +53,8 @@ export default class Source extends React.Component {
 
 
     getTags() {
-        return this.state.tags.map(tagName => {
-            return <Tag shownColor="red">{tagName}</Tag>;
+        return this.state.tags.map(tag => {
+            return <Tag shownColor={tag.color}>{tag.name}</Tag>;
         });
     }
 

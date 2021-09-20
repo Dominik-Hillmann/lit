@@ -16,7 +16,7 @@ export default class Tag extends React.Component {
         return (
             <p 
                 className="tag"
-                style={{ backgroundColor: 'red' }}
+                style={{ backgroundColor: this.state.color }}
             >
                 {this.state.name}
             </p>

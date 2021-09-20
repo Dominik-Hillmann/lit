@@ -1,9 +1,8 @@
 .tag {
     display: inline-block;
     
-    margin-right: 4px;
-    padding: 3px;
-
+    margin-right: 5px !important;
+    padding: 2px 4px 2px 4px;
 
     color: white;
 

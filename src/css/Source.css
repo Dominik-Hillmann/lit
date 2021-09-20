@@ -6,9 +6,8 @@
     margin: 0;
 }
 
-
 .label h1 {
-    font-size: 50px;
+    font-size: 45px;
 }
 
 .label h2 {
@@ -16,7 +15,7 @@
     margin-bottom: 10px;
 
     font-family: 'Celias', sans-serif;
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 900;
 
     cursor: pointer;
@@ -52,5 +51,5 @@
 }
 
 .react-flow__node.selected {
-    filter: drop-shadow(2px 5px 5px red);
+    filter: drop-shadow(2px 5px 5px gray);
 }
