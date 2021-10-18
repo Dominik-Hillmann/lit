@@ -1,10 +1,10 @@
+import React from 'react';
 import './App.css';
 
 // import './components/ExampleFlow';
 import ExampleFlow from './components/ExampleFlow';
 import ExampleFlow2 from './components/ExampleFlow2';
-import Sidebar from './components/Sidebar';
-import React from 'react';
+import Sidebar from './components/Sidebar';;
 
 export default class App extends React.Component {
     constructor(props) {
