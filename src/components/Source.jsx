@@ -53,8 +53,8 @@ export default class Source extends React.Component {
 
 
     getTags() {
-        return this.state.tags.map(tag => {
-            return <Tag shownColor={tag.color}>{tag.name}</Tag>;
+        return this.state.tags.map((tag, i) => {
+            return <Tag key={i} shownColor={tag.color}>{tag.name}</Tag>;
         });
     }
 
