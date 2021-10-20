@@ -9,7 +9,8 @@
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "react-flow-renderer": "^9.6.7",
-        "react-scripts": "4.0.3"
+        "react-scripts": "4.0.3",
+        "wasm": "file:src/wasm-build/"
     },
     "main": "src/index.js",
     "scripts": {

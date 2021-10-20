@@ -13,6 +13,8 @@ export default class App extends React.Component {
             graphId: 'graph-1',
             displayedGraph: <ExampleFlow />
         };
+
+        import('wasm').then(module => console.log(module));
     }
 
 
@@ -38,11 +40,12 @@ export default class App extends React.Component {
 
 
     render() {
-        return (
-            <div className="App">
-                <Sidebar changeProject={this.changeProject.bind(this) /* .bind very important */} />
-                {this.getCurrentGraph()}
-            </div>
-        );
+        return <div>Hello, WebAssembly!</div>
+        // return (
+            // <div className="App">
+            //     <Sidebar changeProject={this.changeProject.bind(this) /* .bind very important */} />
+            //     {this.getCurrentGraph()}
+            // </div>
+        // );
     }
 }
